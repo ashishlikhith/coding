@@ -1,2 +1,2 @@
 # cse111repo
-This is my frist edit
+This is my first edit
