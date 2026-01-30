@@ -26,8 +26,8 @@ class dymanicarray{
             delete []arr;
             arr=newarr;
         }
-        arr[index]=value;
-        index++;
+        arr[size]=value;
+        // index++;
         size++;
 
     }
@@ -46,9 +46,9 @@ class dymanicarray{
     int operator[](int index){
         if(index>=size){
             cout<<"Index is out of bound"<<endl;
-            index-1;
+            return 1;
         }
-        return index;
+        return arr[index];
     }
     ~dymanicarray(){
         delete []arr;
@@ -68,6 +68,8 @@ int main(){
     for(int i=0;i<n;i++){
         cout<<d[i]<<endl;
     }
+
+    
 
 
 }
