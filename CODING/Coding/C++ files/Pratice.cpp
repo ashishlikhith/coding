@@ -101,22 +101,26 @@ using namespace std;
 
 
 class student{
-    int marks;
+    int *marks;
 
     public:
     student(int marks){
-        this->marks = marks;
+        this->marks = new int(marks);
     }
 
     student(const student &temp){
-        this->marks = temp.marks;
+        this->marks = new int(*temp.marks);
     }
     void setMarks(int marks){
-        this->marks = marks;
+        *this->marks = marks;
     }
 
     void display(){
-        cout << "marks: " << marks << endl;
+        cout << "marks: " << *marks << endl;
+    }
+
+    ~student(){
+        delete marks;
     }
 };
 int main(){
